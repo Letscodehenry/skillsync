@@ -5,7 +5,7 @@ from users.models import Skill
 class SkillSerializer(serializers.ModelSerializer):
     class Meta:
         model = Skill
-        fields = ['id','name']
+        fields = ['id', 'title', 'description', 'owner']
 
 class ProjectSerializer(serializers.ModelSerializer):
     client = serializers.ReadOnlyField(source='client.username')
@@ -13,10 +13,10 @@ class ProjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Project
-        field = '__all__'
+        field = ['id', 'title', 'description', 'owner'] 
 
 class ProposalSerializer(serializers.ModelSerializer):
     freelancer = serializers.ReadOnlyField(source='freelancer.username')
 
     class Meta:
-        model = Proposalfields = '__all__'
+        model = Proposalfields = ['id', 'title', 'description', 'owner'] 
