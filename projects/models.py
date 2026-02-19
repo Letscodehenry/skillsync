@@ -25,7 +25,7 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
-    
+ 
 
 class Proposal(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='proposals')
