@@ -2,7 +2,7 @@ from django.db import models
 from django.conf import settings
 
 class Project(models.Model):
-    STATUS_CHOICES = (
+    STATUS_CHOICES = ( 
         ('open', 'Open'),
         ('in_progress', 'In Progress'),
         ('completed', 'Completed'),
